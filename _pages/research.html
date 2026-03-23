@@ -1,0 +1,33 @@
+---
+layout: archive
+title: "Research"
+permalink: /research/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p>My research focuses on political behavior and political methodology, with an emphasis on belief formation and belief updating. I am particularly interested in designing experiments that distinguish partisan motivated reasoning from rational Bayesian updating, and in developing formal statistical models of how political information restructures belief distributions.</p>
+
+{% assign working_papers = site.publications | where: "category", "working_papers" %}
+{% if working_papers.size > 0 %}
+<h2>Working Papers</h2>
+<hr />
+{% for post in working_papers reversed %}
+  <div class="archive__item" style="margin-bottom: 2em;">
+    <h3 class="archive__item-title">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+    </h3>
+    {% if post.award %}
+      <p style="margin: 0.2em 0 0.4em;"><em>{{ post.award }}</em></p>
+    {% endif %}
+    <span class="label" style="background-color: #6f777d; color: white; padding: 2px 8px; border-radius: 3px; font-size: 0.8em;">{{ post.status }}</span>
+    {% if post.excerpt %}
+      <p class="archive__item-excerpt" style="margin-top: 0.6em;">{{ post.excerpt | markdownify }}</p>
+    {% endif %}
+    {% if post.paperurl %}
+      <p><a href="{{ post.paperurl }}">Download Paper</a></p>
+    {% endif %}
+  </div>
+{% endfor %}
+{% endif %}
