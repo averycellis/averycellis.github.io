@@ -26,9 +26,9 @@ author:
   avatar           : "profile.png"
   name             : "Avery Ellis"
   pronouns         : "he/him"  
-  bio              : "Incoming PhD Student in Political Science, University of California, Berkeley"
-  location         : "Berkeley, CA"
-  employer         : "UC Berkeley"
+  bio              : "Incoming PhD Student in Political Science"
+  location         : "Somerville, MA"
+  employer         : #"UC Berkeley"
   uri              : # URL
   email            : "averycellis01@gmail.com" 
 
