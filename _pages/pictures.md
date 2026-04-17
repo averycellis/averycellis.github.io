@@ -38,7 +38,7 @@ author_profile: true
 
 .photo-caption {
   font-size: 0.78em;
-  color: #666;
+  color: var(--global-text-color-light, #666);
   margin-top: 5px;
   text-align: center;
   line-height: 1.3;
