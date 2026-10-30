@@ -7,13 +7,13 @@ author_profile: true
 
 {% include base_path %}
 
-<p>My research focuses on political behavior and political methodology, with an emphasis on belief formation and belief updating. I am particularly interested in designing experiments that distinguish partisan motivated reasoning from rational Bayesian updating, and in developing formal models of how political information restructures belief distributions.</p>
+<p>My research focuses on American political behavior and political methodology, with an emphasis on how Americans form their beliefs and how we can better determine their opinions through better survey methods.</p>
 
-{% assign working_papers = site.publications | where: "category", "working_papers" %}
-{% if working_papers.size > 0 %}
+{% assign works_in_progress = site.publications | where: "category", "works_in_progress" %}
+{% if works_in_progress.size > 0 %}
 <h2>Works in Progress</h2>
 <hr />
-{% for post in working_papers reversed %}
+{% for post in works_in_progress reversed %}
   <div class="archive__item" style="margin-bottom: 2em;">
     <h3 class="archive__item-title">
       <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
